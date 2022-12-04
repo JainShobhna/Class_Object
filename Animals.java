@@ -12,14 +12,15 @@ public class Animals {
         // this.noOfLegs = legs;
     }
 
-    public String typeOfAnimal(String name1) {
+    public String getAnimalName(){
+        return this.name;
+    }
 
-        this.name = name1;
+    public String typeOfAnimal() {
+
         String act = "";
 
-        // this.activity = act;
-
-        switch (name1) {
+        switch (this.name) {
 
             case "Rats":
             case "Dogs":
