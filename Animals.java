@@ -2,7 +2,7 @@
 
 public class Animals {
 
-   private String name;
+    private String name;
     private String activity;
     // private int noOfLegs;
 
@@ -15,9 +15,9 @@ public class Animals {
     public String typeOfAnimal(String name1) {
 
         this.name = name1;
-        String act =this.activity;
+        String act = "";
 
-     this.activity = act;
+        // this.activity = act;
 
         switch (name1) {
 
@@ -37,17 +37,22 @@ public class Animals {
                 break;
             default:
                 System.out.println("Incorrect name provided");
+                act = "Nothing";
                 break;
 
         }
-        return this.activity = act;
+      this.activity = act;
+
+        return act;
     }
 
     public void whatTheyDo() {
         if (this.activity.equalsIgnoreCase("Walk")) {
             System.out.println(this.name + " - They can not fly ");
-        } else {
+        } else if (this.activity.equalsIgnoreCase("Fly")) {
             System.out.println(this.name + " - They can fly");
+        } else {
+            System.out.println("Nothing");
         }
 
     }
